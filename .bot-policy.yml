@@ -1,0 +1,40 @@
+# LlamaForge Bot Policy Configuration
+# This file configures how the bot generates tests for this repository
+
+# Allowed paths where tests can be written
+allowedPaths:
+  - __tests__
+  - tests
+  - src/__tests__
+  - test
+  - spec
+
+# Forbidden glob patterns
+forbiddenGlobs:
+  - "**/node_modules/**"
+  - "**/dist/**"
+  - "**/build/**"
+  - "**/.git/**"
+  - "**/coverage/**"
+
+# Maximum number of lines in the diff that triggers test generation
+maxDiffLines: 5000
+
+# Test framework to use
+testFramework: vitest
+
+# Fields to mask in snapshot tests (for determinism)
+snapshotMaskFields:
+  - timestamp
+  - id
+  - uuid
+  - createdAt
+  - updatedAt
+  - _id
+  - __v
+
+# Require deterministic tests
+requireDeterminism: true
+
+# Maximum size of generated PR (in lines of code)
+maxPRSize: 500
