@@ -1,0 +1,17 @@
+{
+  "name": "llamaforge-test",
+  "version": "1.0.0",
+  "description": "Test repository for LlamaForge",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "format": "prettier --write \"**/*.{ts,js,json,md}\"",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "vitest": "^1.2.0",
+    "typescript": "^5.3.3",
+    "@types/node": "^20.11.0"
+  }
+}
